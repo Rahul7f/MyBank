@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:elevation="0dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:fitsSystemWindows="true"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topBar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintHorizontal_bias="0">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_back_arrow_society_appbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.0"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_title_society_appbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.16"/>
+
+                <ImageView
+                    android:id="@+id/pop_stack_button"
+                    android:layout_width="48sp"
+                    android:layout_height="0sp"
+                    android:src="@drawable/arrow_icon"
+                    android:scaleType="center"
+                    android:paddingStart="24sp"
+                    app:layout_constraintStart_toEndOf="@id/guideline_back_arrow_society_appbar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_title_society_appbar"
+                    app:layout_constraintHorizontal_bias="0"/>
+
+                <TextView
+                    android:id="@+id/toolbar_title_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="33sp"
+                    android:layout_marginStart="12sp"
+                    android:gravity="center_vertical"
+                    android:text="Fragment Name"
+                    android:textColor="#2196F3"
+                    android:textFontWeight="600"
+                    app:autoSizeMaxTextSize="30sp"
+                    app:autoSizeMinTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guideline_title_society_appbar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.7" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
