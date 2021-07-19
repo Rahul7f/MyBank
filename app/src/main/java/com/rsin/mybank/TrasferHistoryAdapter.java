@@ -61,7 +61,7 @@ public class TrasferHistoryAdapter extends RecyclerView.Adapter<TrasferHistoryAd
     }
     String time(long tm)
     {
-        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm a");
+        SimpleDateFormat formatter = new SimpleDateFormat("hh:mm a");
         String dateString = formatter.format(new Date(tm));
         return dateString;
     }
