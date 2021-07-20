@@ -6,6 +6,8 @@ import androidx.room.Room;
 
 import android.accounts.Account;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.rsin.mybank.roomdb.BankData;
 import com.rsin.mybank.roomdb.MyAccount;
@@ -22,6 +24,16 @@ public class AccountListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_list);
         bankDataList= new ArrayList<>();
+
+        findViewById(R.id.pop_stack_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        TextView title = findViewById(R.id.toolbar_title_textView);
+        title.setText("All Accounts");
 
 
         MyDatabase myDatabase = Room.databaseBuilder(AccountListActivity.this,MyDatabase.class,"BankDC")

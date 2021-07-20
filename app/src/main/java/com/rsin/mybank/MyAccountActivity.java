@@ -18,6 +18,16 @@ public class MyAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_profile);
+
+        findViewById(R.id.pop_stack_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        TextView title = findViewById(R.id.toolbar_title_textView);
+        title.setText("My Account");
         payme = findViewById(R.id.pay_btn);
         name = findViewById(R.id.account_holder_tv);
         bank = findViewById(R.id.Bank_name_tv);

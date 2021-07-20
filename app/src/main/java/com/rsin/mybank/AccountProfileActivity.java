@@ -34,6 +34,16 @@ public class AccountProfileActivity extends AppCompatActivity {
         money.setText(bankData.getAmount());
         ifsc.setText(bankData.getIFSC());
 
+        findViewById(R.id.pop_stack_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        TextView title = findViewById(R.id.toolbar_title_textView);
+        title.setText("Account Profile");
+
 
 
 
